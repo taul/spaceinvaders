@@ -17,7 +17,7 @@ public class Board extends JPanel {
 	
 	public void paint(Graphics  g) {
 		Graphics2D draw = (Graphics2D) g;
-		draw.drawImage(background, 10, 10, null);
+		draw.drawImage(background, 0, 0, null);
 	}
 
 }

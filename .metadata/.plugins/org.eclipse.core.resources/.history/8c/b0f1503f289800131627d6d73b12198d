@@ -1,0 +1,35 @@
+package spaceinvaders;
+
+public class AlienFleet {
+
+	//Three rows and 10 columns of ships
+    AlienShip alienMatrix[][] = new AlienShip[3][10];
+    
+    //direction of the aliens
+    boolean movingRight = true;
+
+    public AlienFleet(Ship s, SpaceInvaders si, Image ai) {
+        ship = s;
+	spaceInvaders = si;
+	alienImage = ai;
+
+//	alienImage = new javax.swing.ImageIcon("alienFull.jpg").getImage();
+
+	
+    createArmy();
+	setStartingPositions();
+    }
+
+    /**
+     * In this method we initialise the 3 rows of aliens
+     * that make up the army.
+     */
+    private void createArmy() {        
+    	for (int i = 0; i < 3; i++) {
+    		for(int i = 0; j < 10; i++){
+    			alienMatrix[i][j] = new Alien(alienImage);
+    		}
+    	}	
+    }
+    
+}

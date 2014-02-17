@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename method &apos;spaceinvaders.AlienFleet.AlienArmy(...)&apos; to &apos;AlienFleet&apos;&#x0D;&#x0A;- Original project: &apos;Invaders&apos;&#x0D;&#x0A;- Original element: &apos;spaceinvaders.AlienFleet.AlienArmy(...)&apos;&#x0D;&#x0A;- Renamed element: &apos;spaceinvaders.AlienFleet.AlienFleet(...)&apos;&#x0D;&#x0A;- Update references to refactored element" delegate="false" deprecate="false" description="Rename method &apos;AlienArmy&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.method" input="/src&lt;spaceinvaders{AlienFleet.java[AlienFleet~AlienArmy~QShip;~QSpaceInvaders;~QImage;" name="AlienFleet" references="true" stamp="1392678108769" version="1.0"/>
+</session>

@@ -4,6 +4,10 @@ import javax.swing.JFrame;
 
 public class MainWindow extends JFrame {
 	
+	public static void main(String[] args) {
+		new MainWindow();
+	}
+
 	public MainWindow() {
 		add(new Board());
 		setTitle("Space Invaders");
@@ -13,8 +17,5 @@ public class MainWindow extends JFrame {
 		setVisible(true);
 		setResizable(false);
 	}
-	public static void main(String[] args) {
-		new MainWindow();
-	}
-
+	
 }
