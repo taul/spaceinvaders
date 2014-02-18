@@ -1,7 +1,0 @@
-package spaceinvaders;
-
-import java.awt.*;
-
-public class Player implements MouseListener, MouseMotionListener{
-
-}
