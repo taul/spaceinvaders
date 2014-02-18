@@ -82,11 +82,9 @@ public class Player implements MouseListener, MouseMotionListener {
 	}
 
 	public boolean checkShot(int x, int y) {
-		//Same as for the aliens I guess...
 		if (alive && (x >= xPosition) && (x <= (xPosition + WIDTH))
 				&& (y >= yPosition) && (y <= (yPosition + HEIGHT))) {
 			alive = false; // We died :(
-			mw.decreaseScore();
 			return true;
 		}
 		return false;

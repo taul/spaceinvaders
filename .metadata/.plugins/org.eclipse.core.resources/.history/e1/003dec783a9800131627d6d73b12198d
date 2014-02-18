@@ -52,7 +52,7 @@ public class AlienFleet {
 		}
 		//Check if a live alien ship has reached the bottom of the screen (alienship.yPosition >= mw.HEIGHT)
 		
-		// Maybe add the aliens firing random missiles?
+		// Maybe add the aliens firing their missiles here?
 	}
 
 	public void drawArmy(Graphics g) {

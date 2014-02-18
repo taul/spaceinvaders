@@ -49,7 +49,7 @@ public class MainWindow extends JFrame implements Runnable {
 	}
 
 	// Lose score if we get killed.
-	public void decreaseScore() {
+	public void shotShip() {
 		score -= 4;
 		System.out.println("Current Score = " + score);
 	}
