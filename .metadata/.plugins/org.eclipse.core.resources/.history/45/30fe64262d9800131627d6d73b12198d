@@ -7,10 +7,11 @@ import java.awt.*;
  */
 public class AlienShip {
 
+	// public static int ALIEN_HEIGHT = something;
+	// public static int ALIEN_WIDTH = something;
+
 	private int xPosition = 0;
 	private int yPosition = 0;
-	public static int HEIGHT; // unsure what these shot be set to as of now
-	public static int WIDTH;
 
 	// Whether this ship is alive or dead
 	private boolean alive = true;
@@ -29,8 +30,7 @@ public class AlienShip {
 	public boolean hitAlien(int x, int y) {
 		// check if it is alive if it is:
 		// Check X and Y, if they are ok we killed it
-		if (alive && (x >= xPosition) && (x <= (xPosition + WIDTH))
-				&& (y >= yPosition) && (y <= (yPosition + HEIGHT))) {
+		if (alive && x == xPosition && y == yPosition) {
 			alive = false;
 			return true;
 		}
@@ -39,8 +39,6 @@ public class AlienShip {
 
 	// Set the current position of the ship
 	public void setPosition(int x, int y) {
-		xPosition = x;
-		yPosition = y;
 	}
 
 	// Some getters are always nice to have

@@ -3,10 +3,7 @@ package spaceinvaders;
 import javax.swing.JFrame;
 
 public class MainWindow extends JFrame {
-
-	public static int WIDTH = 640;
-	public static int HEIGHT = 480;
-
+	
 	public static void main(String[] args) {
 		new MainWindow();
 	}
@@ -15,10 +12,10 @@ public class MainWindow extends JFrame {
 		add(new Board());
 		setTitle("Space Invaders");
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
-		setSize(WIDTH, HEIGHT);
+		setSize(640,480);
 		setLocationRelativeTo(null);
 		setVisible(true);
 		setResizable(false);
 	}
-
+	
 }

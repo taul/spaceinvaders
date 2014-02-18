@@ -30,8 +30,8 @@ public class AlienFleet {
 	private void setStartingPositions() {
 		// All of the integers below should probably be static and based on
 		// something instead of taken from thin air.
-		int rowHeight = 50;// Height of the top row
-		int leftStart = 50;// Position of the alien the farthest to the left
+		int rowHeight = 50;//Height of the top row
+		int leftStart = 50;//Position of the alien the furthest to the left
 		for (int i = 0; i < 3; i++) {
 			for (int j = 0; j < 10; j++) {
 				alienMatrix[i][j].setPosition(leftStart, rowHeight);
