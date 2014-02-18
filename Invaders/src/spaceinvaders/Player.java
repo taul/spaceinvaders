@@ -16,9 +16,11 @@ public class Player implements MouseListener, MouseMotionListener {
 
 	Image playerShip;
 	AlienFleet fleet;
+	MainWindow mw;
 
-	public Player(Image playerShip) {
+	public Player(Image playerShip, MainWindow mw) {
 		this.playerShip = playerShip;
+		this.mw = mw;
 		// Some fancy dynamic positioning (based on the screen size)
 		xPosition = (int) ((MainWindow.WIDTH / 2) + (WIDTH / 2));
 		yPosition = MainWindow.HEIGHT - HEIGHT - 20; // remember that these are
@@ -43,9 +45,7 @@ public class Player implements MouseListener, MouseMotionListener {
 	@Override
 	public void mouseClicked(MouseEvent arg0) {
 		// Shoot!
-		// Get the current alien fleet from somewhere (board? mainwindow?)
-		// because the missile class will need a fleet to hit.
-		// Create a new missile at xPosition+(SHIP_WIDTH/2), yPosition
+		fleet = mw.getAlienFleet();
 		missile = new Missile((int) xPosition + (WIDTH / 2), yPosition, fleet);
 	}
 

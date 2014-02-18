@@ -42,13 +42,13 @@ public class AlienFleet {
 		}
 	}
 
-	public void moveArmy() {
+	public void moveFleet() {
 		// something something. set new positions. probably will be quite a bit
 		// of messy code here
 		if (movingRight) {
-
+			System.out.println("movin right");
 		} else {
-
+			System.out.println("movin left");
 		}
 		// Maybe add the aliens firing their missiles here?
 	}
