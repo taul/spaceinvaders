@@ -7,16 +7,16 @@ import java.awt.event.MouseMotionListener;
 
 public class Player implements MouseListener, MouseMotionListener {
 
-	public static int WIDTH; // We'll have to figure something out later.
-	public static int HEIGHT;
+	public static int WIDTH = 27;
+	public static int HEIGHT = 21;
 	private int xPosition = 0;
 	private int yPosition = 0;
 	private boolean alive = true;
 	private Missile missile; // Only one missile at a time for now.
 
-	Image playerShip;
-	AlienFleet fleet;
-	MainWindow mw;
+	private Image playerShip;
+	private AlienFleet fleet;
+	private MainWindow mw;
 
 	public Player(Image playerShip, MainWindow mw) {
 		this.playerShip = playerShip;
@@ -38,8 +38,12 @@ public class Player implements MouseListener, MouseMotionListener {
 
 	@Override
 	public void mouseMoved(MouseEvent arg0) {
-		// Move ship
-
+        int newX = arg0.getX();
+        if (newX > (MainWindow.WIDTH-this.WIDTH-10)) {
+        	xPosition = MainWindow.WIDTH-this.WIDTH-10;
+        } else {
+        	xPosition = newX;
+        } 
 	}
 
 	@Override
@@ -75,7 +79,7 @@ public class Player implements MouseListener, MouseMotionListener {
 
 	public void drawShip(Graphics g) {
 		// Draw ship and missile if it exists.
-
+		g.drawImage(playerShip, xPosition, yPosition, mw);
 		if ((missile != null) && missile.missileExists()) {
 			missile.drawMissile(g);
 		}

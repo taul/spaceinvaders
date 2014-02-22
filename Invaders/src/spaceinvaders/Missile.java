@@ -7,8 +7,8 @@ import java.awt.*;
  */
 public class Missile implements Runnable {
 
-	private int WIDTH;
-	private int HEIGHT;
+	private int WIDTH = 5;
+	private int HEIGHT = 10;
 
 	private int xPosition = 0;
 	private int yPosition = 0;
