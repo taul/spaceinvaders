@@ -9,16 +9,18 @@ public class AlienShip {
 
 	private int xPosition = 0;
 	private int yPosition = 0;
-	public static int HEIGHT; // unsure what these shot be set to as of now
-	public static int WIDTH;
+	public static int WIDTH = 53;
+	public static int HEIGHT = 42;
+
 
 	// Whether this ship is alive or dead
 	private boolean alive = true;
 
 	private Image alienShipImage;
-
-	public AlienShip(Image ship) {
+	private MainWindow mw;
+	public AlienShip(Image ship, MainWindow mw) {
 		alienShipImage = ship;
+		this.mw = mw;
 	}
 
 	public boolean isAlive() {
@@ -54,7 +56,7 @@ public class AlienShip {
 
 	public void drawAlien(Graphics g) {
 		if (alive) {
-			// Draw it if it's alive.
+			g.drawImage(alienShipImage, xPosition, yPosition, mw);
 		}
 	}
 

@@ -2,27 +2,32 @@ package spaceinvaders;
 
 import java.awt.*;
 
+import javax.swing.ImageIcon;
+
 /**
  *
  */
 public class Missile implements Runnable {
 
-	private int WIDTH;
-	private int HEIGHT;
+	private int WIDTH = 5;
+	private int HEIGHT = 10;
 
 	private int xPosition = 0;
 	private int yPosition = 0;
 
-	private int missileSpeed; // how long, in milliseconds, between moving 2 pixels. is this a
+	private int missileSpeed = 10; // how long, in milliseconds, between moving 2 pixels. is this a
 								// good way to do it?
 	boolean missileExists = true;
 
 	AlienFleet fleet;
-
-	public Missile(int x, int y, AlienFleet fleet) {
+	private Image missileImage;
+	private MainWindow mw;
+	public Missile(int x, int y, AlienFleet fleet, MainWindow mw) {
 		xPosition = x;// Set the shot direction
 		yPosition = y;
 		this.fleet = fleet;
+		this.mw = mw;
+		missileImage = new ImageIcon(this.getClass().getResource("bomb.png")).getImage();
 		Thread thread = new Thread(this);
 		thread.start();
 	}
@@ -50,7 +55,7 @@ public class Missile implements Runnable {
 
 	public void drawMissile(Graphics g) {
 		if (missileExists) {
-
+			g.drawImage(missileImage, xPosition, yPosition, mw);
 		} else {
 
 		}
