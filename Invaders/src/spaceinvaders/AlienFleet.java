@@ -58,7 +58,6 @@ public class AlienFleet {
 			for(int i = (nbrOfColumns-1); i >=0; i--){
 				if(deadInColumn[i] < nbrOfRows){ //if anyone is alive in the column
 					if (alienMatrix[i][0].getXPos() > (MainWindow.WIDTH-AlienShip.WIDTH-AlienShip.WIDTH)){ //If there's no space to move to the right
-						System.out.println("this happend, mw wid-shipwid = " + (MainWindow.WIDTH-AlienShip.WIDTH) + " and XPos = " + alienMatrix[i][0].getXPos());
 						movingRight = false;
 						moveFleetOneStepDown();
 						return; //Don't want to check the rest of them
@@ -134,7 +133,7 @@ public class AlienFleet {
 			for (int j = 0; j < nbrOfRows; j++) {
 				if (alienMatrix[i][j].hitAlien(x, y)) {
 					deadInColumn[i]++;
-					// Add to the some score counter here.
+					mw.increaseScore();
 					return true;
 				}
 			}

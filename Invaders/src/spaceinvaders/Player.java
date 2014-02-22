@@ -50,7 +50,7 @@ public class Player implements MouseListener, MouseMotionListener {
 	public void mouseClicked(MouseEvent arg0) {
 		// Shoot!
 		fleet = mw.getAlienFleet();
-		missile = new Missile((int) xPosition + (WIDTH / 2), yPosition, fleet);
+		missile = new Missile((int) xPosition + (WIDTH / 2), yPosition, fleet, mw);
 	}
 
 	@Override
